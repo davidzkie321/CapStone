@@ -29,18 +29,18 @@
 
                         @if($products->discount_price!=null)
 
-                        <h6 style="color: blue">
+                        <h6>
                         ₱{{$products->discount_price}}
                         </h6>
 
-                        <h6 style="text-decoration: line-through; color: red">
+                        <h6 style="text-decoration: line-through">
                         ₱{{$products->price}}
                         </h6>
 
                         @else
 
-                        <h6 style="blue">
-                        ₱{{$product->price}}
+                        <h6>
+                        ₱{{$products->price}}
                         </h6>
 
                         @endif
