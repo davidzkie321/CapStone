@@ -20,11 +20,23 @@
       <link href="home/css/style.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="home/css/responsive.css" rel="stylesheet" />
-      <style>
-        .codeLucky {
-            font-size: large;
-            
+      <style type="text/css">
+        .center {
+            margin: auto;
+            width: 50%;
+            text-align: center;
+            padding: 30px;
         }
+
+        th {
+            background: rgb(247,68,78);
+            color:white;
+        }
+
+        .th_deg {
+
+        }
+
     </style>
    </head>
    <body>
@@ -33,36 +45,60 @@
         @include('home.header')
 
         
-         <!-- slider section -->
-        @include('home.slider')
+
     
+
+      <div class="center table">
+
+      <table>
+
+      <tr>
+        <th class="th_deg">Product title</th>
+        <th class="th_deg">Product quantity</th>
+        <th class="th_deg">Price</th>
+        <th class="th_deg">Image</th>
+        <th class="th_deg">Action</th>
+
+      </tr>
+
+      <?php $totalprice=0; ?>
+
+      @foreach($cart as $cart)
+
+      <tr>
+        <td><i><b>{{$cart->product_title}}</b></i></td>
+        <td>{{$cart->quantity}}</td>
+        <td>₱{{$cart->price}}</td>
+        <td><img class="img img-fluid col-lg-6" src="/product/{{$cart->image}}"></td>
+        <td><a class="btn" onclick="return confirm('Are you sure to remove this product?')" href="{{url('remove_cart', $cart->id)}}">Remove Product</a></td>
+
+      </tr>
+
+      <?php $totalprice=$totalprice + $cart->price ?>
+
+      @endforeach
+
+
+      </table>
+
+      <div>
+
+      <h1 class="p-4">Total Price : ₱{{$totalprice}}</h1>
+
       </div>
-      <!-- why section -->
-        @include('home.why')
 
-      <!-- arrival section -->
-        @include('home.new_arrival')
+      </div>
 
-
-      <!-- product section -->
-      @include('home.product')
-
- 
-      <!-- subscribe section -->
-      @include('home.subscribe')
-
-      <!-- client section -->
-      @include('home.client')
 
       <!-- footer start -->
-      @include('home.footer')
+
       
 
 
       <div class="cpy_">
          <p class="mx-auto">© 2021 All Rights Reserved By <a href="">Something</a><br>
          
-            Distributed By <a href="https://themewagon.com/" target="_blank">Someone</a>
+            Distributed By <a href="" target="_blank">Someone</a>
          
          </p>
       </div>
