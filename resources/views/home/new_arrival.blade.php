@@ -11,10 +11,9 @@
                            #NewArrivals
                         </h2>
                      </div>
-                     <p style="margin-top: 20px;margin-bottom: 30px;">
-                        Vitae fugiat laboriosam officia perferendis provident aliquid voluptatibus dolorem, fugit ullam sit earum id eaque nisi hic? Tenetur commodi, nisi rem vel, ea eaque ab ipsa, autem similique ex unde!
-                     </p>
-                     <a href="">
+                     <p style="margin-top: 20px;margin-bottom: 30px;" class=""pb="2">
+                     Introducing our captivating and trend-setting new clothing product arrivals! Elevate your style with our latest collection, featuring a harmonious blend of contemporary designs and timeless elegance. Unveil your inner fashionista with vibrant floral prints and striking geometric patterns that accentuate your individuality. Crafted from premium, sustainable fabrics, each piece exudes unparalleled comfort and durability.
+                     <a href="" class="mt-3">
                      Shop Now
                      </a>
                   </div>

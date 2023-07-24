@@ -151,8 +151,14 @@
                 </div>
               </li>
             <li>
-            <x-app-layout>
-            </x-app-layout>
+            <li class="nav-item">
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <input type="submit" value="Logout">
+
+                        </form>
+                        </li>
             </li>
           </div>
         </nav>

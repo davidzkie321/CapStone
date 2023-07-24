@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
+        <base href="/public">
       <!-- Basic -->
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,12 +21,6 @@
       <link href="home/css/style.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="home/css/responsive.css" rel="stylesheet" />
-      <style>
-        .codeLucky {
-            font-size: large;
-            
-        }
-    </style>
    </head>
    <body>
       <div class="hero_area">
@@ -33,26 +28,50 @@
         @include('home.header')
 
         
-         <!-- slider section -->
-        @include('home.slider')
     
-      </div>
-      <!-- why section -->
-        @include('home.why')
-
-      <!-- arrival section -->
-        @include('home.new_arrival')
 
 
-      <!-- product section -->
-      @include('home.product')
-
+      <div class="col-sm-6 col-md-4 col-lg-4" style="margin:auto; width: 50%; padding: 30px">
  
-      <!-- subscribe section -->
-      @include('home.subscribe')
+                     <div class="img-box" style="padding: 20px">
+                        <img class="img img-fluid" src="product/{{$product->image}}" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           {{$product->title}}
+                        </h5>
 
-      <!-- client section -->
-      @include('home.client')
+                        @if($product->discount_price!=null)
+
+                        <h6 style="color: blue">
+                        ₱{{$product->discount_price}}
+                        </h6>
+
+                        <h6 style="text-decoration: line-through; color: red">
+                        ₱{{$product->price}}
+                        </h6>
+
+                        @else
+
+                        <h6 style="blue">
+                        ₱{{$product->price}}
+                        </h6>
+
+                        @endif
+
+                        <h6><b>Product Category:</b> {{$product->catagory}}</h6>
+
+                        <h6><b>Product Details:</b> {{$product->description}}</h6>
+
+                        <h6><b>Available Quantity:</b> {{$product->quantity}}</h6>
+
+
+                        
+
+
+                     </div>
+                  </div>
+               </div>
 
       <!-- footer start -->
       @include('home.footer')

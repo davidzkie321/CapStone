@@ -7,9 +7,9 @@
                         <a href="#"><img width="210" src="images/logo.png" alt="#" /></a>
                       </div>
                       <div class="information_f">
-                        <p><strong>ADDRESS:</strong> 28 White tower, Street Name New York City, USA</p>
-                        <p><strong>TELEPHONE:</strong> +91 987 654 3210</p>
-                        <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+                        <p><strong>ADDRESS:</strong> G-48 Tangan Liburon Racrac City, Cebu</p>
+                        <p><strong>TELEPHONE:</strong> +63 989 548 8564</p>
+                        <p><strong>EMAIL:</strong> davidskie@gmail.com</p>
                       </div>
                    </div>
                </div>

@@ -20,52 +20,31 @@
       <link href="home/css/style.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="home/css/responsive.css" rel="stylesheet" />
-      <style>
-        .codeLucky {
-            font-size: large;
-            
-        }
-    </style>
    </head>
-   <body>
+   <body class="sub_page">
       <div class="hero_area">
-         <!-- header section strats -->
-        @include('home.header')
+          <!-- header section strats -->
+          @include('home.header')
 
-        
-         <!-- slider section -->
-        @include('home.slider')
-    
       </div>
+      <!-- inner page section -->
+      <section class="inner_page_head">
+         <div class="container_fuild">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <h3>Blog List</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end inner page section -->
+
       <!-- why section -->
-        @include('home.why')
-
-      <!-- arrival section -->
-        @include('home.new_arrival')
-
-
-      <!-- product section -->
-      @include('home.product')
-
- 
-      <!-- subscribe section -->
-      @include('home.subscribe')
-
-      <!-- client section -->
-      @include('home.client')
-
-      <!-- footer start -->
-      @include('home.footer')
-      
-
-
-      <div class="cpy_">
-         <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
-         
-            Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-         
-         </p>
-      </div>
+      @include('home.why')
+      <!-- footer section -->
+            @include('home.con_blog_footer')
       <!-- jQery -->
       <script src="home/js/jquery-3.4.1.min.js"></script>
       <!-- popper js -->

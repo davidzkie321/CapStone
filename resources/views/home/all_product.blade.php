@@ -32,30 +32,17 @@
          <!-- header section strats -->
         @include('home.header')
 
-        
-         <!-- slider section -->
-        @include('home.slider')
-    
-      </div>
-      <!-- why section -->
-        @include('home.why')
 
-      <!-- arrival section -->
-        @include('home.new_arrival')
+    
+
 
 
       <!-- product section -->
-      @include('home.product')
+      @include('home.product_view')
 
  
       <!-- subscribe section -->
-      @include('home.subscribe')
 
-      <!-- client section -->
-      @include('home.client')
-
-      <!-- footer start -->
-      @include('home.footer')
       
 
 

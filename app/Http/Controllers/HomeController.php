@@ -36,4 +36,30 @@ class HomeController extends Controller
             return view('home.userpage', compact('product'));
         }
     }
+
+    public function product_details($id)
+    {
+
+        $product=product::find($id);
+
+        return view('home.product_details', compact('product'));
+    }
+
+
+
+
+
+
+
+    public function product()
+    {
+
+        $product=Product::paginate(10);
+
+        // $comment=comment::orderby('id', 'desc')->get();
+
+        // $reply=reply::all();
+
+        return view('home.all_product', compact('product'));
+    }
 }

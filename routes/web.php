@@ -41,3 +41,20 @@ route::get('/update_product/{id}', [AdminController::class, 'update_product']);
 
 route::post('/update_product_confirm/{id}', [AdminController::class, 'update_product_confirm']);
 
+route::get('/product_details/{id}', [HomeController::class, 'product_details']);
+
+
+
+
+route::get('/products', [HomeController::class, 'product']);
+
+
+Route::get('/blog', function () {
+    return view('home.blog');
+});
+
+// web.php
+Route::get('/contact', function () {
+    return view('home.contact');
+});
+
