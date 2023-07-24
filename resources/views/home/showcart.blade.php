@@ -44,7 +44,15 @@
          <!-- header section strats -->
         @include('home.header')
 
-        
+        @if(session()->has('message'))
+
+         <div class="alert rounded-0" style="background: wheat">
+
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+            {{session()->get('message')}}
+
+         </div>
+         @endif
 
     
 
@@ -83,7 +91,18 @@
 
       <div>
 
-      <h1 class="p-4">Total Price : ₱{{$totalprice}}</h1>
+      <h3 class="p-4">Total Price : ₱{{$totalprice}}</h3>
+
+      </div>
+
+      <div>
+
+      <h5>Proceed to Order</h5>
+
+      <a href="{{url('cash_order')}}" class="btn rounded-0 my-1 mx-2" style="border: .1px solid grey">Cash On Delivery</a>
+
+      <a href="" class="btn rounded-0 my-1 mx-2" style="border: .1px solid grey">Pay Using Card</a>
+
 
       </div>
 
